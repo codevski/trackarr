@@ -5,8 +5,8 @@
   rel="stylesheet"
 />
 
-<div style="display: block; margin: auto; width: 20%">
-  <img src="docs/assets/trackarr.png" />
+<div style="display: block; margin: auto;">
+<img src="docs/assets/trackarr.png" style="display: block; margin: auto; width: 20%;" />
 </div>
 
 <h1 align="center" style="position: relative;  font-family: 'Rubik Wet Paint', sans-serif;
