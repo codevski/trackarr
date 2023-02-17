@@ -5,7 +5,7 @@
   rel="stylesheet"
 />
 
-<img src="docs/assets/trackarr.png" class="rounded mx-auto d-block" style="display: block;
+<img src="docs/assets/trackarr.png" style="display: block;
 margin: auto; width: 20%" />
 
 <h1 align="center" style="position: relative;  font-family: 'Rubik Wet Paint', sans-serif;
