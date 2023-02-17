@@ -5,8 +5,9 @@
   rel="stylesheet"
 />
 
-<img src="docs/assets/trackarr.png" style="display: block;
-margin: auto; width: 20%" />
+<div style="display: block; margin: auto; width: 20%">
+  <img src="docs/assets/trackarr.png" />
+</div>
 
 <h1 align="center" style="position: relative;  font-family: 'Rubik Wet Paint', sans-serif;
 line-height: 40px;">TRACKARR</h1>
