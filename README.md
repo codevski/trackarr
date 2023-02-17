@@ -1,16 +1,6 @@
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
-  rel="stylesheet"
-/>
-
 <p align="center">
-<img src="docs/assets/trackarr.png" style="width: 20%;" />
+<img src="docs/assets/trackarr.png" style="width: 30%;" />
 </p>
-
-<h1 align="center" style="position: relative;  font-family: 'Rubik Wet Paint', sans-serif;
-line-height: 40px;">TRACKARR</h1>
 <div align="center">
   <strong>Game Collection Tracker</strong></div>
 <div align="center">
