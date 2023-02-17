@@ -1,27 +1,15 @@
-<head>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
-      rel="stylesheet"
-    />
-</head>
-<style>
-.main-title {
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Rubik Wet Paint", sans-serif;
-  line-height: 40px;
-}
-.img {
-  display: block;
-  margin: auto;
-}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+  rel="stylesheet"
+/>
 
-<img class="img" src="docs/assets/trackarr.png" class="rounded mx-auto d-block" style="width: 20%; text-align: center;" />
+<img src="docs/assets/trackarr.png" class="rounded mx-auto d-block" style="display: block;
+margin: auto; width: 20%" />
 
-<h1 class="main-title" align="center">TRACKARR</h1>
+<h1 align="center" style="position: relative;  font-family: 'Rubik Wet Paint', sans-serif;
+line-height: 40px;">TRACKARR</h1>
 <div align="center">
   <strong>Game Collection Tracker</strong></div>
 <div align="center">
