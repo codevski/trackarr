@@ -6,14 +6,27 @@ import (
 	"time"
 
 	"github.com/codevski/trackarr/database"
+	_ "github.com/codevski/trackarr/docs"
 	"github.com/codevski/trackarr/models"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofiber/fiber/v2"
 	"golang.org/x/crypto/bcrypt"
 )
 
-const SecretKey = "secret"
-
+// Get status
+//
+//	@Summary		Status endpoint
+//	@Description	get status
+//	@Tags			status
+//	@Accept			json
+//	@Produce		json
+//
+//
+//	@Success		200	{string}	string	"OK"
+//	@Failure		400	{object}	error
+//	@Failure		404	{object}	error
+//	@Failure		500	{object}	error
+//	@Router			/status [get]
 func Status(c *fiber.Ctx) error {
 	return c.SendString("OK")
 }
@@ -45,6 +58,7 @@ func Register(c *fiber.Ctx) error {
 
 func Login(c *fiber.Ctx) error {
 	BCRYPT_PASSWORD := os.Getenv("BCRYPT_PASSWORD")
+	SECRET_KEY := os.Getenv("SECRET_KEY")
 	var data map[string]string
 
 	err := c.BodyParser(&data)
@@ -75,7 +89,7 @@ func Login(c *fiber.Ctx) error {
 		ExpiresAt: time.Now().Add(time.Hour * 24).Unix(),
 	})
 
-	token, err := claims.SignedString([]byte(SecretKey))
+	token, err := claims.SignedString([]byte(SECRET_KEY))
 	if err != nil {
 		c.Status(fiber.StatusInternalServerError)
 		return c.JSON(fiber.Map{
@@ -98,10 +112,11 @@ func Login(c *fiber.Ctx) error {
 }
 
 func GetUser(c *fiber.Ctx) error {
+	SECRET_KEY := os.Getenv("SECRET_KEY")
 	cookie := c.Cookies("jwt")
 
 	token, err := jwt.ParseWithClaims(cookie, &jwt.StandardClaims{}, func(token *jwt.Token) (interface{}, error) {
-		return []byte(SecretKey), nil
+		return []byte(SECRET_KEY), nil
 	})
 
 	if err != nil {

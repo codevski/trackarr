@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/codevski/trackarr/controllers"
+	_ "github.com/codevski/trackarr/docs"
 	"github.com/gofiber/fiber/v2"
 )
 
