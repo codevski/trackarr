@@ -1,0 +1,42 @@
+basePath: /api/v1
+host: localhost:8080
+info:
+  contact:
+    name: API Support
+    url: https://discord.comn/trackarr
+  description: This is the Trackarr API documentation.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://trackarr.games/terms
+  title: Trackarr API
+  version: "1.0"
+paths:
+  /status:
+    get:
+      consumes:
+      - application/json
+      description: get status
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema: {}
+        "404":
+          description: Not Found
+          schema: {}
+        "500":
+          description: Internal Server Error
+          schema: {}
+      summary: Status endpoint
+      tags:
+      - status
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"
